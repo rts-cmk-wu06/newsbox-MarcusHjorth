@@ -5,28 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NewsBox</title>
-    <!--  FONT AWSOME -->
+    <!--  FONT AWSOME + font -->
     <script src="https://kit.fontawesome.com/ccda818105.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@200&family=Zen+Kaku+Gothic+Antique:wght@500&display=swap" rel="stylesheet">
     <!--  STYLE  -->
     <link rel="stylesheet" href="./css/index.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--  Animation  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <nav>
-        <i class="fas fa-inbox"></i>
-        <h1>NewsBox</h1>
-        <a href="./settings.html"><i class="fas fa-cog"></i></a>
-    </nav>
-
+    <header>
+        <nav>
+            <a class="aArchive" href="./archive.html"><i class="fas fa-inbox"></i></a>
+            <h1>NewsBox</h1>
+            <a class="aSettings" href="./settings.html"><i class="fas fa-cog"></i></a>
+        </nav>
+    </header>
 
     <main>
-       <div class="Toggle">
-           <input type="checkbox" class="checkbox" id="checkbox">
-           <label for="checkbox" class="label">
-               <div class="ball"></div>
-            </label>
-       </div>
-    </main>
+    <section>
+        <div class="searchBar">
+            <input class="searchInput" type="text" placeholder="Search news">
+            <i class="fas fa-search"></i>
+        </div>
+    </section>
 
+        <section id="wrapper">
+            <div id="sectionEurope">
+                
+
+            </div>
+            <div id="sectionHealth">
+                
+            </div>
+            <div id="sectionSport">
+                
+            </div>
+            <div id="sectionBusiness">
+                
+            </div>
+            <div id="sectionTravel">
+                
+            </div>
+        </section>
+    </main>
+    
+    <!--
+    -->
     <script src="./js/darkMode.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/Swipe.js"></script>
 </body>
 </html>

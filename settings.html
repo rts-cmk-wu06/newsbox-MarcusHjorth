@@ -8,63 +8,69 @@
         <!--  FONT AWSOME -->
         <script src="https://kit.fontawesome.com/ccda818105.js" crossorigin="anonymous"></script>
     
-        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/settings.css">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 
 <body>
     <nav>
-        <a href="./index.html"><i class="fas fa-chevron-left"></i></a>
+        <a class="backArrow" href="./index.html"><i class="fas fa-chevron-left"></i></a>
         <h1>News settings</h1>
     </nav>
     <main>
-        <div class="Titel">
+        <div class="Title">
             <h1>Manage</h1>
             <p>Categories</p>
         </div>
+
         <section>
+
             <div class="categories">
                 <h4>EUROPE</h4>
-                <div class="Toggle">
-                    <input type="checkbox" class="checkbox" id="checkbox">
-                    <label for="checkbox" class="label">
-                        <div class="ball"></div>
-                     </label>
-                </div>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
             </div>
             <div class="categories">
                 <h4>HEALTH</h4>
-                <div class="Toggle">
-                    <input type="checkbox" class="checkbox" id="checkbox">
-                    <label for="checkbox" class="label">
-                        <div class="ball"></div>
-                     </label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
             </div>
             <div class="categories">
                 <h4>SPORT</h4>
-                <div class="Toggle">
-                    <input type="checkbox" class="checkbox" id="checkbox">
-                    <label for="checkbox" class="label">
-                        <div class="ball"></div>
-                     </label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
             </div>
             <div class="categories">
                 <h4>BUSINESS</h4>
-                <div class="Toggle">
-                    <input type="checkbox" class="checkbox" id="checkbox">
-                    <label for="checkbox" class="label">
-                        <div class="ball"></div>
-                     </label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
             </div>
             <div class="categories">
                 <h4>TRAVEL</h4>
-                <div class="Toggle">
-                    <input type="checkbox" class="checkbox" id="checkbox">
-                    <label for="checkbox" class="label">
-                        <div class="ball"></div>
-                     </label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
             </div>
         </section>
+        <!--
+
+            <div class="Toggle">
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="label">
+                    <div class="ball"></div>
+                </label>
+            </div>
+        -->
         
         <button id="DarkModeToggle">
             TOGGLE DARK MODE

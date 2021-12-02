@@ -1,0 +1,90 @@
+//layout
+:root {
+    --color-primary: white;
+    --color-secondary: #ECEFF0;
+    --color-darkGray: #707070;
+    
+    --color-text: black;
+// Primary Colors
+    --color-Sage: #87BCBF;
+    --color-Rust: #D97D54;
+    --color-Darb: #324755;
+    --color-Danger: #D95454;
+
+// Typograpgy Colors
+    --color-Onxy: #181C20;
+    --color-Slate: #6E8CA0;
+    --color-Snow: #FFFFFF;
+
+// Secondary Colors
+    --color-Ice: #F0F3F4;
+    --color-Fossil: #C8D1D3;
+    --color-Sand: #B9B0A2;
+
+    --boxShadow: rgba(185, 185, 185, 0.45);
+}
+
+.darkMode{
+    --color-secondary: #494e5c;
+    --color-primary: #292c35;
+    --color-border: #707070;
+    
+    --color-text: white;
+
+    // Primary Colors
+    --color-Sage: #87BCBF;
+    --color-Rust: #D97D54;
+    --color-Darb: #324755;
+    --color-Danger: #D95454;
+
+// Typograpgy Colors
+    --color-Onxy: #181C20;
+    --color-Slate: #6E8CA0;
+    --color-Snow: #FFFFFF;
+    
+// Secondary Colors
+    --color-Ice: #F0F3F4;
+    --color-Fossil: #C8D1D3;
+    --color-Sand: #B9B0A2;
+
+    --boxShadow: rgba(39, 39, 39, 0.45);
+    --color-transparent: rgba(131, 131, 131, 0);
+}
+
+* {
+    margin: 0px;
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
+}
+
+body {
+    background-color: var(--color-primary);
+    nav {
+        background-color: var(--color-primary);
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        box-shadow: 0px 2px 2px var(--boxShadow);
+        .aBack {
+            align-self: center;
+            grid-column: 1/2;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: var(--color-text);
+        }
+        h1 {
+            margin: auto;
+            grid-column: 2/3;
+            color: var(--color-text);
+        }
+        .aSettings {
+            align-self: center;
+            grid-column: 3/4;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: var(--color-text);
+        }
+    }
+}

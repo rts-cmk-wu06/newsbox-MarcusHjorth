@@ -5,99 +5,162 @@
     --color-darkGray: #707070;
     
     --color-text: black;
+// Primary Colors
+    --color-Sage: #87BCBF;
+    --color-Rust: #D97D54;
+    --color-Darb: #324755;
+    --color-Danger: #D95454;
 
-    --color-archive: #87BCBF;
+// Typograpgy Colors
+    --color-Onxy: #181C20;
+    --color-Slate: #6E8CA0;
+    --color-Snow: #FFFFFF;
+
+// Secondary Colors
+    --color-Ice: #F0F3F4;
+    --color-Fossil: #C8D1D3;
+    --color-Sand: #B9B0A2;
+
+    --boxShadow: rgba(185, 185, 185, 0.45);
 }
 
 .darkMode{
-    --color-primary: #292c35;
     --color-secondary: #494e5c;
+    --color-primary: #292c35;
     --color-border: #707070;
     
     --color-text: white;
 
-    --color-archive: #87BCBF;
-    --color-transparent: rgba(255, 255, 255, 0);
-}
+    // Primary Colors
+    --color-Sage: #87BCBF;
+    --color-Rust: #D97D54;
+    --color-Darb: #324755;
+    --color-Danger: #D95454;
 
+// Typograpgy Colors
+    --color-Onxy: #181C20;
+    --color-Slate: #6E8CA0;
+    --color-Snow: #FFFFFF;
+    
+// Secondary Colors
+    --color-Ice: #F0F3F4;
+    --color-Fossil: #C8D1D3;
+    --color-Sand: #B9B0A2;
+
+    --boxShadow: rgba(39, 39, 39, 0.45);
+    --color-transparent: rgba(131, 131, 131, 0);
+}
 
 * {
     margin: 0px;
+    font-family:'Zen Kaku Gothic Antique', sans-serif;
 }
-
 body {
-    background-color: var(--color-secondary);
-    margin: auto;
+    background-color: var(--color-primary);
     nav {
-        display: flex;
-        flex-direction: row;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        section {
-            display: flex;
-            flex-direction: column;
-            
+        background-color: var(--color-primary);
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        box-shadow: 0px 2px 2px var(--boxShadow);
+        .aArchive {
+            align-self: center;
+            grid-column: 1/2;
+            margin-left: 10px;
+            margin-right: 10px;
             color: var(--color-text);
-            width: 90%;
-            background-color: var(--color-primary);
-            
-            .categories {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                h4 {
-                    width: 150px;
-                }
+        }
+        h1 {
+            margin: auto;
+            grid-column: 2/3;
+            color: var(--color-text);
+        }
+        .aSettings {
+            align-self: center;
+            grid-column: 3/4;
+            margin-left: 10px;
+            margin-right: 10px;
+            color: var(--color-text);
+        }
+    }
+    section {
+        width: 90%;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        .searchBar {
+            position: relative;
+            .searchInput {
+                width: 90%;
+                padding: 10px;
+                padding-left: 20px;
+                background-color: var(--color-Ice);
+                margin: auto;
+                border: 0px;
+                border-radius: 5px;
+            }
+            .fa-search {
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                color: var(--color-Fossil);
             }
         }
+    }
+    main {
+        section {
+            article {
+                display: grid;
+                grid-template-columns: 1fr 40%;
+                grid-auto-rows: 100px;
+                
+                height: 100px;
 
-            #DarkModeToggle {
-                border: 1px solid;
-                border-color: var(--color-darkGray);
-                border-radius: 50px;
-                background-color: var(--color-transparent);
-                color: var(--color-text);
-                padding: 10px;
-                padding-top: 15px;
-                padding-bottom: 15px;
-            
+                transition: height 0.5s ease;
+                .deleteItem {
+                    color: white;
+                    background-color: var(--color-Sage);
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row: 1 / 2;
+                    
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+
+                    height: 100px;
+                }
+                .swipeItem {
+                    grid-column-start: 1;
+                    grid-column-end: 3;
+                    grid-row: 1 / 2;
+                    height: 100px;
+                    
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    
+                    background-color: var(--color-primary);
+                img {
+                    height: 70px;
+                    width: 70px;
+                    
+                    
+                    }
+                    .article__text {
+                        height: 80px;
+
+                        inline-size: 250px;
+                        overflow: hidden;
+                        color: var(--color-text);
+                    }
+                }
+            } 
         }
     }
-}
-
-
-.checkbox {
-    opacity: 0;
-    position: absolute;
-}
-
- .checkbox:checked + .label .ball{
-    transform: translate(24px);
-}
-
-.label {
-    background-color: #111;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    border-radius: 50px;
-    height: 26px;
-    width: 50px;
-    transform: scale(1);
-}
-
-.ball {
-    background-color: white;
-    position: absolute;
-    border-radius: 50%;
-    top: 2px;
-    left: 2px;
-    width: 22px;
-    height: 22px;
-    transition: transform 0.1s linear;
 }
