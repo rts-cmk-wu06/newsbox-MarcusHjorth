@@ -13,7 +13,7 @@ for(let i = 0; i < category.length; i++) {
     
         //let section = document.querySelector('#wrapper');
         
-        for(let i = 0; i < 2; i++) {
+        for(let i = 0; i < 3; i++) {
             function shortenStr(str, max){
                 if(str.length <= max) return str;
                 return str.substr(0, str.lastIndexOf(" ", 30, "..."));
