@@ -147,13 +147,12 @@ body {
                     
                     background-color: var(--color-primary);
                 img {
+                    border-radius: 35px;
                     height: 70px;
                     width: 70px;
-                    
-                    
                     }
                     .article__text {
-                        height: 80px;
+                        height: 78px;
 
                         inline-size: 250px;
                         overflow: hidden;
@@ -163,4 +162,7 @@ body {
             } 
         }
     }
+}
+.ItemCollapse {
+    height: 0px;
 }

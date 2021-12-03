@@ -125,12 +125,17 @@ body main section article .swipeItem {
   background-color: var(--color-primary);
 }
 body main section article .swipeItem img {
+  border-radius: 35px;
   height: 70px;
   width: 70px;
 }
 body main section article .swipeItem .article__text {
-  height: 80px;
+  height: 78px;
   inline-size: 250px;
   overflow: hidden;
   color: var(--color-text);
+}
+
+.ItemCollapse {
+  height: 0px;
 }

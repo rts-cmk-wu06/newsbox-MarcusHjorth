@@ -70,3 +70,78 @@ body nav .aSettings {
   margin-right: 10px;
   color: var(--color-text);
 }
+body section {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+body section .searchBar {
+  position: relative;
+}
+body section .searchBar .searchInput {
+  width: 90%;
+  padding: 10px;
+  padding-left: 20px;
+  background-color: var(--color-Ice);
+  margin: auto;
+  border: 0px;
+  border-radius: 5px;
+}
+body section .searchBar .fa-search {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: var(--color-Fossil);
+}
+body #container {
+  width: 90%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+body #container article {
+  display: grid;
+  grid-template-columns: 1fr 40%;
+  grid-auto-rows: 100px;
+  height: 100px;
+  transition: height 0.5s ease;
+}
+body #container article .deleteItem {
+  color: white;
+  background-color: var(--color-Danger);
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+}
+body #container article .swipeItem {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1/2;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-primary);
+}
+body #container article .swipeItem img {
+  border-radius: 35px;
+  height: 70px;
+  width: 70px;
+}
+body #container article .swipeItem .article__text {
+  height: 78px;
+  inline-size: 250px;
+  overflow: hidden;
+  color: var(--color-text);
+}
+
+.ItemCollapse {
+  height: 0px;
+}

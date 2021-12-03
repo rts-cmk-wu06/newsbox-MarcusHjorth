@@ -11,24 +11,25 @@ if(localStorage.getItem('deletedItems')){
 }
 
 document.querySelector("#wrapper").addEventListener('touchstart', (e) => {
-    if(e.target.tagName == "ASIDE") {
+    if(e.target.parentElement.tagName == "ASIDE"||
+    e.target.parentElement.parentElement.tagName == "ASIDE"){
 
         let deleteButtonWidth = (window.screen.width * 0.4);
         
-        let touchElement = e.target;
-        let parentElement = e.target.closest("section");
+        let touchElement = e.target.closest(".swipeItem");
+        let parentElement = e.target.closest(".article");
         let touchCordinateStart = e.touches[0].clientX;
         
-        console.log("This is a test");
         // Collapse and delte item
         // Vi har brugt unclick i stedet for addeventlistener fordi den kun kan bruges 1 gang
         parentElement.querySelector(".deleteItem").onclick = () => {
-            let userObject = {
-                id: parentElement.id,
-                name:parentElement.querySelector(".swipeItem").textContent,
+            let newsBox = {
+                title:parentElement.querySelector("h4").textContent,
+                abstract:parentElement.querySelector("p").textContent,
+                img:parentElement.querySelector("img").getAttribute("src")
             };
 
-            trash.push(userObject);
+            trash.push(newsBox);
             localStorage.setItem('deletedItems', JSON.stringify(trash));
             parentElement.querySelector(".deleteItem").onclick = null;
             
